@@ -1,0 +1,110 @@
+/* Add a black background color to the top navigation */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Style the links inside the navigation bar */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    font-size: 18px;
+    font-weight:500;
+    transition: .3s;
+}
+
+nav ul li a.active {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+body {
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Displaying images in form of collage */
+.collage-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.collage-container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.highlight {
+    background-size: cover;
+    background-position: center;
+    height: 0;
+    padding-bottom: 56%;
+    position: static;
+}
+
+/* Styling the headings */
+h1{
+    color:orangered;
+}
+
+/* Styling the text */
+p{
+    color:rgb(98, 104, 63);
+}
+
+/* Displaying quiz contianer */
+#quiz{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
+/* footer styling */
+#footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#footer p {
+    margin: 0;
+    color: #555;
+}
+
+#official{
+    color:black;
+    padding: 15px;
+    display: block;
+}
