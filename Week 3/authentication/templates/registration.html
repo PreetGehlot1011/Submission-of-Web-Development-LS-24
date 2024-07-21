@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block base %}
+
+<div class="contain">
+  <div class="form-container">
+    <form class="registration-form" method="post">
+      {% csrf_token %}
+        <h2 style="font-weight: bold;">Register Account</h2>
+
+        {% if messages %}
+        <div class="container mt-3">
+            {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <label for="name" name="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="email" name="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password" name="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <p>Already have a account <a href="{% url 'login' %}">Login</a></p>
+
+        <button type="submit">Submit</button>
+    </form> 
+  </div>
+</div>
+
+{% endblock %}

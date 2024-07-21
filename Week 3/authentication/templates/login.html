@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block base %}
+
+<div class="contain">
+  <div class="form-container">
+    <form class="registration-form" method="post">
+      {% csrf_token %}
+        <h2 style="font-weight: bold;">Login</h2>
+
+        {% if message %}
+          {{massages.tags}}
+          <div class="alert alert-light" role="alert">
+              {% for message in messages %}
+              {{ message }}
+              {% endfor %}
+          </div>
+        {% endif %}
+
+        <label for="name" name="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password" name="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <p>Doesn't have a account <a href="{% url 'registration' %}">Register</a></p>
+
+        <button type="submit">Submit</button>
+    </form> 
+  </div>
+</div>
+
+{% endblock %}
